@@ -2,16 +2,61 @@
 from optparse import OptionParser
 from github import Github
 
-parser = OptionParser(usage="usage: %prog ACTION [options] \n ACTION = TESTS_OK_PR | PARSE_UNIT_TESTS_FAIL")
+#-----------------------------------------------------------------------------------
+#---- Parser Options
+#-----------------------------------------------------------------------------------
+parser = OptionParser(usage="usage: %prog ACTION [options] \n ACTION = TESTS_OK_PR | PARSE_UNIT_TESTS_FAIL | PARSE_BUILD_FAIL")
 
 parser.add_option("-u", action="store", type="string", dest="username", help="Your github account username", default='None')
 parser.add_option("-p", action="store", type="string", dest="password", help="Your github account password", default='None')
 parser.add_option("--pr", action="store", type="int", dest="pr_number", help="The number of the pull request to use", default=-1)
 parser.add_option("--pr-job-id", action="store", type="int", dest="pr_job_id", help="The jenkins job id for the  pull request to use", default=-1)
+parser.add_option("--unit-tests-file", action="store", type="string", dest="unit_tests_file", help="Unit tests file to analyze", default='None')
 
 (options, args) = parser.parse_args()
 
+#------------------------------------------------------------------------------------
+#---- Error Class
+#------------------------------------------------------------------------------------
+#TODO
+
 #-------------------------------------------------------------------------------------
+def read_build_log_file(repo,build_log,tests_url):
+	pull_request = repo.get_pull(pr_number)
+	error_found = False
+	line_number = 0
+	error_line = 0
+	lines_to_keep=3
+	lines = ['']
+	for line in open(build_log):
+		line_number += 1
+		lines.append(line)
+		if (line_number > lines_to_keep):
+			lines.pop(0)
+		if 'error: ' in line:
+			error_found = True
+			error_line = line_number
+			#print line
+		if error_found:
+			break
+	message = '-1 \n I found an error when building: \n \n <pre>'
+	for line in lines:
+		message += line + '\f'
+	message += '</pre> \n you can see the results of the tests here: \n %s ' % tests_url
+	print message 
+	#pull_request.create_issue_comment(message)
+
+def read_unit_tests_file(repo,unit_tests_file,tests_url):
+	pull_request = repo.get_pull(pr_number)
+	errors_found=''
+	for line in open(unit_tests_file):
+		if( 'had ERRORS' in line):
+			errors_found = errors_found + line
+	message = '-1 \n I ran the usual tests and I found errors in the following unit tests: \n \n %s \n \n' % errors_found
+	message = message + 'you can see the results of the tests here: \n %s ' % tests_url
+	print message
+	pull_request.create_issue_comment(message)
+
 def send_tests_approved_pr_message(repo,pr_number,tests_url):
 	pull_request = repo.get_pull(pr_number)
 	print 'I will send an approval comment for PR %d:' % pr_number
@@ -53,7 +98,6 @@ if (action == 'prBot.py'):
 
 print 'you chose the action %s' % action
 
-
 if (options.username == 'None' ):
 	complain_missing_param('github username')
 	exit()
@@ -81,11 +125,16 @@ else:
 github = Github(username, password)
 official_cmssw=get_cmssw_official_repo(github)
 
-
 if (action == 'TESTS_OK_PR'):
 	tests_results_url='https://cmssdt.cern.ch/SDT/jenkins-artifacts/pull-request-integration/%d/summary.html' % pr_job_id
 	send_tests_approved_pr_message(official_cmssw,pr_number,tests_results_url)
 elif (action == 'PARSE_UNIT_TESTS_FAIL'):
+	tests_results_url='https://cmssdt.cern.ch/SDT/jenkins-artifacts/pull-request-integration/%d/summary.html' % pr_job_id
 	unit_tests_file = options.unit_tests_file
+	read_unit_tests_file(official_cmssw,unit_tests_file,tests_results_url)
+elif (action == 'PARSE_BUILD_FAIL'):
+	tests_results_url='https://cmssdt.cern.ch/SDT/jenkins-artifacts/pull-request-integration/%d/summary.html' % pr_job_id
+	build_log_file = options.unit_tests_file
+	read_build_log_file(official_cmssw,build_log_file, tests_results_url)
 else:
 	print "I don't recognize that action!"

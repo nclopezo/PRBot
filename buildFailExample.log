@@ -1,0 +1,141 @@
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Building CMSSW version CMSSW_7_0_X_2013-10-14-1400 ----
+>> Creating project symlinks
+>> Entering Package Validation/Configuration
+>> Entering Package FWCore/Version
+>> Entering Package Validation/RecoParticleFlow
+>> Entering Package DQMOffline/PFTau
+>> Entering Package RecoParticleFlow/PFRootEvent
+  src/Validation/Configuration/python -> python/Validation/Configuration
+  src/Validation/RecoParticleFlow/python -> python/Validation/RecoParticleFlow
+  src/DQMOffline/PFTau/python -> python/DQMOffline/PFTau
+Entering library rule at FWCore/Version
+Entering library rule at Validation/RecoParticleFlow
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/src/TH2Analyzer.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/src/Comparator.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/src/NicePlot.cc 
+>> Building LCG reflex dict from header file src/Validation/RecoParticleFlow/src/classes.h
+Entering library rule at src/Validation/RecoParticleFlow/bin
+Entering library rule at DQMOffline/PFTau
+Entering library rule at src/Validation/RecoParticleFlow/bin
+Entering library rule at RecoParticleFlow/PFRootEvent
+>> Building LCG reflex dict from header file src/RecoParticleFlow/PFRootEvent/src/classes.h
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/CMSIterativeConeAlgorithm.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/CMSMidpointAlgorithm.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/DialogFrame.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/DisplayManager.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/FWLiteJetProducer.cc 
+--->> genreflex: INFO: Parsing file src/Validation/RecoParticleFlow/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class Styles
+class TH2Analyzer
+class Comparator
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/FastJetFWLiteWrapper.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFBase.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFCluster.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFGenParticle.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFRecHit.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFSimParticle.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/GPFTrack.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/IO.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/JetMaker.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/MyPFRootEventManager.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/METManager.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFJetAlgorithm.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManagerColin.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/ProtoJet.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/ProtoJetComparisons.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/ResidualFitter.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/Utils.cc 
+>> Leaving Package Validation/Configuration
+>> Package Validation/Configuration built
+Entering library rule at src/Validation/RecoParticleFlow/plugins
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/FWCore/Version/src/GetFileFormatVersion.cc 
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc481/src/Validation/RecoParticleFlow/src/ValidationRecoParticleFlow/a/xr.cc
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/FWCore/Version/src/GetReleaseVersion.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/bin/plotCompare.cpp 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/bin/PlotCompareUtility.cpp 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/bin/HistoData.cpp 
+Entering library rule at src/DQMOffline/PFTau/plugins
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/Benchmark.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/CandidateBenchmark.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/METBenchmark.cc 
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc: In member function 'void PFRootEventManager::readOptions(const char*, bool, bool)':
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:330:76: error: no matching function for call to 'PFJetMonitor::setParameters(float&, bool&, Benchmark::Mode, float&, double, double, double, double, double, bool)'
+                                  ptMin, 10e5, -4.5, 4.5, -10.0, 10.0, false);
+                                                                            ^
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:330:76: note: candidates are:
+In file included from /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/interface/PFRootEventManager.h:66:0,
+                 from /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:18:
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:26:8: note: void PFJetMonitor::setParameters(float, bool, bool, Benchmark::Mode, float, float, float, float, float, float, bool)
+   void setParameters(float dRMax, bool onlyTwoJets, bool matchCharge, Benchmark::Mode mode,
+        ^
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:26:8: note:   no known conversion for argument 4 from 'float' to 'Benchmark::Mode'
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:31:8: note: void PFJetMonitor::setParameters(const edm::ParameterSet&)
+   void setParameters( const edm::ParameterSet& parameterSet);
+        ^
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:31:8: note:   candidate expects 1 argument, 10 provided
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/MatchCandidateBenchmark.cc 
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc: In member function 'virtual bool PFRootEventManager::processEntry(int)':
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:2142:62: error: no matching function for call to 'PFJetMonitor::fill(reco::PFJetCollection&, reco::GenJetCollection&, float&, float&)'
+     pfJetMonitor_.fill( pfJets_, genJets_, deltaMin, deltaMax);
+                                                              ^
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:2142:62: note: candidate is:
+In file included from /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/interface/PFRootEventManager.h:66:0,
+                 from /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:18:
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:47:8: note: template<class T, class C> void PFJetMonitor::fill(const T&, const C&, float&, float&, float&, const edm::ParameterSet&)
+   void fill(const T& candidateCollection,
+        ^
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/interface/PFJetMonitor.h:47:8: note:   template argument deduction/substitution failed:
+/build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:2142:62: note:   candidate expects 6 arguments, 4 provided
+     pfJetMonitor_.fill( pfJets_, genJets_, deltaMin, deltaMax);
+                                                              ^
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/MatchMETBenchmark.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/PFCandidateBenchmark.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/PFCandidateManager.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/PFCandidateMonitor.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/PFJetMonitor.cc 
+>> Compiling  /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/DQMOffline/PFTau/src/PFMETMonitor.cc 
+>> Compiling edm plugin /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/plugins/GenJetClosestMatchSelector.cc 
+In file included from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Vector/RotationX.icc:11:0,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Vector/RotationX.h:283,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Vector/Rotation.h:30,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Geometry/Transform3D.icc:6,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Geometry/Transform3D.h:840,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/cms/cmssw/CMSSW_7_0_X_2013-10-14-1400/src/Geometry/CaloGeometry/interface/CaloCellGeometry.h:8,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/cms/cmssw/CMSSW_7_0_X_2013-10-14-1400/src/Geometry/CaloGeometry/interface/CaloSubdetectorGeometry.h:11,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/cms/cmssw/CMSSW_7_0_X_2013-10-14-1400/src/RecoEcal/EgammaCoreTools/interface/PositionCalc.h:21,
+                 from /afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/cms/cmssw/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFClusterProducer/interface/PFClusterAlgo.h:13,
+                 from /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/RecoParticleFlow/PFRootEvent/src/PFRootEventManager.cc:15:
+/afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Units/PhysicalConstants.h: At global scope:
+/afs/cern.ch/cms/sw/ReleaseCandidates/vol0/slc5_amd64_gcc481/external/clhep/2.1.3.1/include/CLHEP/Units/PhysicalConstants.h:83:21: error: 'CLHEP::electron_charge' defined but not used [-Werror=unused-variable]
+ static const double electron_charge = - eplus; // see SystemOfUnits.h
+                     ^
+cc1plus: some warnings being treated as errors
+>> Compiling edm plugin /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/plugins/GenericBenchmarkAnalyzer.cc 
+>> Compiling edm plugin /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/plugins/PFFilter.cc 
+>> Compiling edm plugin /build/cmsbuild/jenkins-workarea/workspace/Pull-Request-Integration/ARCHITECTURE/slc5_amd64_gcc481/CMSSW_7_0_X_2013-10-14-1400/src/Validation/RecoParticleFlow/plugins/PFJetBenchmarkAnalyzer.cc 
+gmake: *** [tmp/slc5_amd64_gcc481/src/RecoParticleFlow/PFRootEvent/src/RecoParticleFlowPFRootEvent/PFRootEventManager.o] Error 1
+gmake: *** Waiting for unfinished jobs....
+--->> genreflex: INFO: Parsing file src/RecoParticleFlow/PFRootEvent/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class ResidualFitter
+class NeutralEvent
+class DialogFrame
+class PFRootEventManagerColin
+class PFRootEventManager
+class TauEvent
+class DisplayManager
+class EventColin
+class EventColin::Block
+class std::vector<EventColin::Block>
+class EventColin::CaloTower
+class std::vector<EventColin::CaloTower>
+class EventColin::Jet
+class std::vector<EventColin::Jet>
+class EventColin::Cluster
+class std::vector<EventColin::Cluster>
+class EventColin::Particle
+class std::vector<EventColin::Particle>
