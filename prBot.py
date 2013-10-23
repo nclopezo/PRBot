@@ -23,18 +23,22 @@ parser.add_option("--unit-tests-file", action="store", type="string", dest="unit
 
 #-------------------------------------------------------------------------------------
  
-def read_matrix_log_file(matrix_log):
-	errors_worfklows = {}
+def read_matrix_log_file(repo,matrix_log,tests_url):
+	pull_request = repo.get_pull(pr_number)
+	workflows_with_error = []
 	for line in open(matrix_log):
 		if 'ERROR executing' in line:
 			parts = line.split(" ")
-			print ''
-			print line
-			print "--------------------"
-			print parts
 			workflow = parts[4]
 			workflow = re.sub('_.*$', '', workflow)
-			print workflow
+			workflows_with_error.append(workflow)
+	message = '-1 \n When I ran the RelVals I found an error in the following worklfows: \n '
+	for wf in workflows_with_error:
+		message += wf + '\n'
+	message += '\n you can see the results of the tests here: \n %s ' % tests_url
+        print message
+	pull_request.create_issue_comment(message) 
+
 
 def read_build_log_file(repo,build_log,tests_url):
 	pull_request = repo.get_pull(pr_number)
@@ -165,7 +169,8 @@ elif (action == 'PARSE_BUILD_FAIL'):
 	build_log_file = options.unit_tests_file
 	read_build_log_file(official_cmssw,build_log_file, tests_results_url)
 elif (action == 'PARSE_MATRIX_FAIL'):
+	tests_results_url='https://cmssdt.cern.ch/SDT/jenkins-artifacts/pull-request-integration/%d/summary.html' % pr_job_id
 	matrix_log_file = options.unit_tests_file
-	read_matrix_log_file(matrix_log_file)
+	read_matrix_log_file(official_cmssw,matrix_log_file,tests_results_url)
 else:
 	print "I don't recognize that action!"
