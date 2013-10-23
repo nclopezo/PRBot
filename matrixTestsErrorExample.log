@@ -1,0 +1,156 @@
+Deprecated, please use -l limited
+processing  relval_standard
+request for INPUT for  None
+processing  relval_highstats
+request for INPUT for  None
+processing  relval_pileup
+request for INPUT for  None
+processing  relval_generator
+request for INPUT for  None
+processing  relval_production
+request for INPUT for  None
+processing  relval_ged
+request for INPUT for  None
+ignoring relval_upgrade from default matrix
+processing  relval_identity
+request for INPUT for  None
+Running in 12 thread(s)
+
+Preparing to run 4.22 RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ echo '{
+"160960":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ (das_client.py --limit=0 --query 'file dataset=/Cosmics/Run2011A-v1/RAW run=160960') | sort -u > step1_dbsquery.log  2>&1
+ 
+
+Preparing to run 4.53 RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.53_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT
+ echo '{
+"194533":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.53_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT
+ (das_client.py --limit=0 --query 'file block=/SinglePhoton/Run2012B-v1/RAW#28d7fcc8-a2a0-11e1-86c7-003048caaace run=194533') | sort -u > step1_dbsquery.log  2>&1
+ 
+
+Preparing to run 5.1 TTbar+TTbarFS+HARVESTFS
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 5.1_TTbar+TTbarFS+HARVESTFS
+ cmsDriver.py TTbar_Tauola_8TeV_cfi  --conditions auto:startup --fast  -n 10 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,1000 -s GEN,SIM,RECO,EI,HLT:@relval,VALIDATION --datatier GEN-SIM-DIGI-RECO,DQM --fileout file:step1.root  > step1_TTbar+TTbarFS+HARVESTFS.log  2>&1
+ 
+---
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ cmsDriver.py step2  --conditions auto:com10 --scenario cosmics --process reRECO --data  --eventcontent RECO,DQMROOT -s RAW2DIGI,L1Reco,RECO,DQM,ALCA:MuAlCalIsolatedMu+DtCalib --datatier RECO,DQMROOT --customise Configuration/DataProcessing/RecoTLR.customiseCosmicData -n 100  --filein filelist:step1_dbsquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC.log  2>&1
+ 
+---
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.53_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT
+ cmsDriver.py step2  --process reHLT --conditions auto:hltonline_8E33v2 --data  --output '[{"e":"RAW","t":"RAW","o":["drop FEDRawDataCollection_rawDataCollector__LHC"]}]' -s L1REPACK,HLT:@relval -n 100  --filein filelist:step1_dbsquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT.log  2>&1
+ 
+
+Preparing to run 8.0 BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 8.0_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS
+ cmsDriver.py BeamHalo_cfi.py  --conditions auto:startup -s GEN,SIM -n 10 --eventcontent RAWSIM --relval 9000,100 --scenario cosmics --datatier GEN-SIM --fileout file:step1.root  > step1_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS.log  2>&1
+ 
+
+Preparing to run 25.0 TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 25.0_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT
+ cmsDriver.py TTbar_Tauola_8TeV_cfi  --conditions auto:startup -s GEN,SIM --datatier GEN-SIM -n 10 --relval 9000,100 --eventcontent RAWSIM --fileout file:step1.root  > step1_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT.log  2>&1
+ 
+
+Preparing to run 1000.0 RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ echo '{
+"165121":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ (das_client.py --limit=0 --query 'file dataset=/MinimumBias/Run2011A-v1/RAW run=165121') | sort -u > step1_dbsquery.log  2>&1
+ 
+
+Preparing to run 1001.0 RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+ echo '{
+"165121":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+ (das_client.py --limit=0 --query 'file dataset=/MinimumBias/Run2011A-v1/RAW run=165121') | sort -u > step1_dbsquery.log  2>&1
+ 
+---
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+ cmsDriver.py step2  --conditions auto:com10 -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForExpress,DQM,ENDJOB --process RECO --data  --eventcontent ALCARECO,DQM --scenario pp --datatier ALCARECO,DQM --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100  --filein filelist:step1_dbsquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD.log  2>&1
+ 
+---
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ cmsDriver.py step2  --conditions auto:com10 -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForPrompt,DQM,ENDJOB --process RECO --data  --eventcontent RECO,AOD,ALCARECO,DQMROOT --scenario pp --datatier RECO,AOD,ALCARECO,DQMROOT --customise Configuration/DataProcessing/RecoTLR.customisePrompt -n 100  --filein filelist:step1_dbsquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT.log  2>&1
+ 
+ERROR executing  cd 4.53_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT; cmsDriver.py step2  --process reHLT --conditions auto:hltonline_8E33v2 --data  --output '[{"e":"RAW","t":"RAW","o":["drop FEDRawDataCollection_rawDataCollector__LHC"]}]' -s L1REPACK,HLT:@relval -n 100  --filein filelist:step1_dbsquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT.log  2>&1;  ret= 18688
+ERROR executing  cd 5.1_TTbar+TTbarFS+HARVESTFS; cmsDriver.py TTbar_Tauola_8TeV_cfi  --conditions auto:startup --fast  -n 10 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,1000 -s GEN,SIM,RECO,EI,HLT:@relval,VALIDATION --datatier GEN-SIM-DIGI-RECO,DQM --fileout file:step1.root  > step1_TTbar+TTbarFS+HARVESTFS.log  2>&1;  ret= 18688
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ cmsDriver.py step3  --datatier ALCARECO --conditions auto:com10 -s ALCA:TkAlCosmics0T+MuAlGlobalCosmics+HcalCalHOCosmics+DQM --scenario cosmics --eventcontent ALCARECO -n 100  --filein file:step2.root  --fileout file:step3.root  > step3_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 8.0_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS
+ cmsDriver.py step2  --datatier GEN-SIM-DIGI-RAW --conditions auto:startup -s DIGI,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --scenario cosmics --eventcontent FEVTDEBUG -n 100  --filein file:step1.root  --fileout file:step2.root  > step2_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ cmsDriver.py step4  --conditions auto:com10 -s SKIM:all --data  --secondfilein filelist:step1_dbsquery.log --filein file:step2.root --scenario cosmics -n 100  --fileout file:step4.root  > step4_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC.log  2>&1
+ 
+ERROR executing  cd 8.0_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS; cmsDriver.py step2  --datatier GEN-SIM-DIGI-RAW --conditions auto:startup -s DIGI,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --scenario cosmics --eventcontent FEVTDEBUG -n 100  --filein file:step1.root  --fileout file:step2.root  > step2_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS.log  2>&1;  ret= 18688
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC
+ cmsDriver.py step5  --conditions auto:com10 --scenario cosmics --data  --filein file:step2_inDQM.root -s HARVESTING:dqmHarvesting --filetype DQM -n 100  --fileout file:step5.root  > step5_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+ cmsDriver.py step3  --datatier ALCARECO --conditions auto:com10 -s ALCA:PromptCalibProd --eventcontent ALCARECO -n 100  --filein file:step2.root  --fileout file:step3.root  > step3_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD
+ cmsDriver.py step4  --data  --conditions auto:com10 --scenario pp -s ALCAHARVEST:BeamSpotByRun+BeamSpotByLumi+SiStripQuality --filein file:PromptCalibProd.root -n 100  --fileout file:step4.root  > step4_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ cmsDriver.py step3  --conditions auto:com10 -s SKIM:all --data  --secondfilein filelist:step1_dbsquery.log --filein file:step2.root --scenario pp -n 100  --fileout file:step3.root  > step3_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ cmsDriver.py step4  --conditions auto:com10 -s HARVESTING:dqmHarvesting --scenario pp --filetype DQM --data  --filein file:step2_inDQM.root -n 100  --fileout file:step4.root  > step4_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT
+ cmsDriver.py step5  --triggerResultsProcess RECO -s ALCAOUTPUT:@allForPrompt --data  --filein file:step2_inALCARECO.root --scenario pp --conditions auto:com10 -n 100  --fileout file:step5.root  > step5_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT.log  2>&1
+ 
+
+# in: /build/dmendezl/CMSSW_7_0_X_2013-10-21-1400 going to execute cd 25.0_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT
+ cmsDriver.py step2  --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --conditions auto:startup -s DIGI,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --eventcontent FEVTDEBUGHLT -n 100  --filein file:step1.root  --fileout file:step2.root  > step2_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT.log  2>&1
+ 
+ERROR executing  cd 25.0_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT; cmsDriver.py step2  --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --conditions auto:startup -s DIGI,L1,DIGI2RAW,HLT:@relval,RAW2DIGI,L1Reco --eventcontent FEVTDEBUGHLT -n 100  --filein file:step1.root  --fileout file:step2.root  > step2_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT.log  2>&1;  ret= 18688
+4.22_RunCosmics2011A+RunCosmics2011A+RECOCOSD+ALCACOSD+SKIMCOSD+HARVESTDC Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED Step4-PASSED  - time date Tue Oct 22 11:37:45 2013-date Tue Oct 22 11:32:46 2013; exit: 0 0 0 0 0
+4.53_RunPhoton2012B+RunPhoton2012B+HLTD+RECODreHLT+HARVESTDreHLT Step0-PASSED Step1-FAILED Step2-NOTRUN Step3-NOTRUN  - time date Tue Oct 22 11:33:57 2013-date Tue Oct 22 11:32:48 2013; exit: 0 18688 0 0
+5.1_TTbar+TTbarFS+HARVESTFS Step0-FAILED Step1-NOTRUN  - time date Tue Oct 22 11:34:19 2013-date Tue Oct 22 11:32:52 2013; exit: 18688 0
+8.0_BeamHalo+BeamHalo+DIGICOS+RECOCOS+ALCABH+HARVESTCOS Step0-PASSED Step1-FAILED Step2-NOTRUN Step3-NOTRUN Step4-NOTRUN  - time date Tue Oct 22 11:36:27 2013-date Tue Oct 22 11:32:57 2013; exit: 0 18688 0 0 0
+25.0_TTbar+TTbar+DIGI+RECO+HARVEST+ALCATT Step0-PASSED Step1-FAILED Step2-NOTRUN Step3-NOTRUN Step4-NOTRUN  - time date Tue Oct 22 11:47:02 2013-date Tue Oct 22 11:33:00 2013; exit: 0 18688 0 0 0
+1000.0_RunMinBias2011A+RunMinBias2011A+TIER0+SKIMD+HARVESTDfst2+ALCASPLIT Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED Step4-PASSED  - time date Tue Oct 22 11:43:10 2013-date Tue Oct 22 11:33:01 2013; exit: 0 0 0 0 0
+1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Tue Oct 22 11:39:48 2013-date Tue Oct 22 11:33:05 2013; exit: 0 0 0 0
+6 3 3 3 2 tests passed, 1 3 0 0 0 failed
+
